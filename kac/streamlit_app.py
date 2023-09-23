@@ -17,3 +17,7 @@ for i, t in enumerate(st.tabs(titles)):
         df = pd.read_csv(f"{titles[i]}_{date}.csv")
         df.index = np.arange(1, len(df) + 1)
         st.dataframe(df)
+
+        st.bar_chart(
+            df.iloc[1:, 2:],
+        )
